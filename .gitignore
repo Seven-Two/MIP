@@ -1,0 +1,40 @@
+__pycache__/
+*.py[cod]
+
+# Local environments
+.venv/
+venv/
+env/
+
+# IDE / OS files
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+.DS_Store
+
+# Large data and generated artifacts
+data/
+ogb_downloaded/
+results/
+save/
+training_curves/
+training_curves_products/
+figures/
+
+# Paper assets not intended for the code repository
+manuscript.pdf
+*.pdf
+prompt_pool.py
+
+# Model checkpoints and cached experiment outputs
+*.pt
+*.pth
+*.pkl
+*.npy
+*.npz
+
+# Generated images
+*.png
+*.jpg
+*.jpeg
