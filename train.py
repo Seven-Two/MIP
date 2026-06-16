@@ -67,8 +67,8 @@ def build_parser():
     parser.add_argument('--ergnn_args', type=str2dict, default={'budget': [100], 'd': [0.5], 'sampler': ['MF']}, help='sampler options: CM, CM_plus, MF, MF_plus')
     parser.add_argument('--joint_args', type=str2dict, default={})
     parser.add_argument('--tpp_args', type=str2dict, default={'prompts': [3], 'pe': [0.2], 'pf': [0.3]})
-    parser.add_argument('--mip_args', type=json.loads, default={'prompts': [3], 'pe': [0.2], 'pf': [0.3], 'lamb': [0.1], 'temp': [0.1], 'reg': [0.001], 'rank': [32], 'smooth_k': [3]})
-    parser.add_argument('--twp_args', type=str2dict, default={'lambda_l': [10000.], 'lambda_t': [10000.], 'beta': 0.01})
+    parser.add_argument('--mip_args', type=json.loads, default={'prompts': [3], 'pe': [0.2], 'pf': [0.3], 'lamb': [0.01, 0.1, 1], 'temp': [0.1, 0.2, 0.5, 1], 'reg': [0.0005], 'rank': [4], 'smooth_k': [3]})
+    parser.add_argument('--twp_args', type=str2dict, default={'lambda_l': [100, 1000, 10000.], 'lambda_t': [100, 1000, 10000.], 'beta': 0.01})
     parser.add_argument('--ewc_args', type=str2dict, default={'memory_strength': 10000.})
     # other parameters
     parser.add_argument('--cls-balance', type=strtobool, default=True, help='whether to balance the cls when training and testing')
